@@ -1,0 +1,34 @@
+<div class="container-login">
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>Use Your Account </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form id="formId" [formGroup]="form">
+        <div class="input-email">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" name="email" formControlName="email">
+              <button mat-icon-button matSuffix>
+                
+              </button>
+          </mat-form-field>
+        </div>
+        <div class="input-password">
+          <mat-form-field class="example-form-field" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hidePass ? 'password' : 'text'" name="password" formControlName="password">
+              <button mat-icon-button matSuffix (click)="hidePass = !hidePass">
+                
+              </button>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" (click)="onLogin()">Login</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

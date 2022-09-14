@@ -1,0 +1,11 @@
+<div class="container-main">
+  <app-header (toggleSidenav)="onCliked()"></app-header>
+
+  <mat-sidenav-container>
+    <app-sidenav #sideNav></app-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
